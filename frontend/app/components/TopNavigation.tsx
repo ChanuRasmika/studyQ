@@ -15,12 +15,10 @@ export default function TopNavigation() {
     <nav className="sticky top-0 z-50 w-full bg-white backdrop-blur border-b">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
 
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img src="/android-chrome-192x192.png" alt="studyQ" className="w-16 h-16" />
         </Link>
 
-        {/* Center Links */}
         <ul className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>
@@ -34,7 +32,6 @@ export default function TopNavigation() {
           ))}
         </ul>
 
-        {/* Actions */}
         <div className="flex items-center gap-4">
           <Link
             href="/login"

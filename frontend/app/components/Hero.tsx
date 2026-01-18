@@ -8,7 +8,7 @@ export default function Hero() {
             <img 
               src="/hero-image.png" 
               alt="Modern student using digital tools for exam preparation" 
-              className="w-full max-w-2xl mx-auto opacity-60"
+              className="w-full max-w-2xl mx-auto"
             />
           </div>
           
