@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     unoptimized: true
   },
   basePath: '/studyQ/frontend',
-  assetPrefix: '/studyQ/',
+  assetPrefix: '/studyQ/frontend/',
 };
 
 export default nextConfig;
