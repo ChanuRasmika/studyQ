@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="bg-white min-h-screen flex items-start py-2 px-6 lg:px-12 overflow-hidden">
@@ -5,9 +7,11 @@ export default function Hero() {
         
         <div>
           <div className="mb-0">
-            <img 
+            <Image 
               src="/hero-image.png" 
               alt="Modern student using digital tools for exam preparation" 
+              width={800}
+              height={600}
               className="w-full max-w-2xl mx-auto"
             />
           </div>

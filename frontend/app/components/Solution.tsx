@@ -26,22 +26,22 @@ export default function Solution() {
     {
       title: "Practice Questions Multiple Times",
       description: "Reinforce your learning by practicing questions repeatedly",
-      icon: "/solution/rotate.png"
+      icon: "/Solution/rotate.png"
     },
     {
       title: "Study Mode and Exam Mode",
       description: "Switch between relaxed study sessions and timed exam practice",
-      icon: "/solution/exam.png"
+      icon: "/Solution/exam.png"
     },
     {
       title: "Instant Answers and Explanations",
       description: "Get immediate feedback with detailed explanations",
-      icon: "/solution/light-bulb.png"
+      icon: "/Solution/light-bulb.png"
     },
     {
       title: "Study from Any Device, Anytime",
       description: "Learn without relying on physical books - access anywhere",
-      icon: "/solution/app.png"
+      icon: "/Solution/app.png"
     }
   ];
 

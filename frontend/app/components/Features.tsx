@@ -4,27 +4,27 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: "/features/open-book.png",
+    icon: "/Features/open-book.png",
     title: "Digital Question Practice",
     description: "No physical books. All questions available digitally and always updated.",
   },
   {
-    icon: "/features/time-tracking.png",
+    icon: "/Features/time-tracking.png",
     title: "Study Mode & Exam Mode",
     description: "Learn step-by-step or test yourself under real exam conditions.",
   },
   {
-    icon: "/features/lightning.png",
+    icon: "/Features/lightning.png",
     title: "Instant Answers & Explanations",
     description: "Understand mistakes immediately and improve faster.",
   },
   {
-    icon: "/features/analysis.png",
+    icon: "/Features/analysis.png",
     title: "Performance Analytics",
     description: "Track strengths, weaknesses, and progress clearly.",
   },
   {
-    icon: "/features/teacher.png",
+    icon: "/Features/teacher.png",
     title: "Teacher Contributions",
     description: "Teachers create questions and earn while reaching more students.",
   },
