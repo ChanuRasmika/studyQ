@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: '/studyQ',
+  basePath: '/studyQ/frontend',
   assetPrefix: '/studyQ/',
 };
 

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function BuiltFor() {
   return (
     <section className="py-8 md:py-12 bg-white text-gray-900">
@@ -41,7 +43,7 @@ export default function BuiltFor() {
                   </ul>
                 </div>
                 <div className="relative">
-                  <img src="/builtforStudent.jpg" alt="Built for Students" className="h-60 w-full object-cover rounded-xl" />
+                  <Image src="/builtforStudent.jpg" alt="Built for Students" width={400} height={240} className="h-60 w-full object-cover rounded-xl" />
                   <div className="absolute bottom-4 right-4">
                     <p className="text-lg md:text-xl font-bold italic text-white bg-black bg-opacity-50 px-3 py-1 rounded">
                       Study smarter, not longer.
@@ -92,7 +94,7 @@ export default function BuiltFor() {
                 </ul>
               </div>
               <div>
-                <img src="/builtforTeachers.jpg" alt="Built for Teachers" className="h-60 w-full object-cover rounded-xl" />
+                <Image src="/builtforTeachers.jpg" alt="Built for Teachers" width={400} height={240} className="h-60 w-full object-cover rounded-xl" />
               </div>
             </div>
           </div>
