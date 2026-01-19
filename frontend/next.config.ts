@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
-  }
+  },
+  basePath: '/studyQ',
+  assetPrefix: '/studyQ/',
 };
 
 export default nextConfig;
