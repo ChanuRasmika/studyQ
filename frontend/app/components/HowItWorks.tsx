@@ -57,7 +57,7 @@ export default function HowItWorks() {
         timeoutRef.current = setTimeout(() => {
           const nextIndex = (currentIndex + 1) % STEPS.length;
           if (nextIndex === 0) {
-            // Reset when loop completes (optional)
+           
             setDisplayedLines([]);
           }
           setCurrentIndex(nextIndex);
@@ -90,10 +90,8 @@ export default function HowItWorks() {
 
   return (
     <section className="py-8 md:py-12 bg-linear-to-b">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8">
-        {/* Optional browser-like frame - you can remove if you prefer plain style */}
+      <div className="max-w-5xl mx-auto px-5 sm:px-8">    
         <div className="rounded-2xl overflow-hidden border border-gray-200/70 bg-white shadow-xl shadow-gray-300/30">
-          {/* Optional header bar */}
           <div className="h-10 sm:h-11 bg-linear-to-b from-gray-100 to-gray-200 flex items-center px-4 gap-3">
             <div className="flex gap-2">
               <div className="w-3 h-3 rounded-full bg-red-400"></div>
@@ -104,8 +102,7 @@ export default function HowItWorks() {
               studyQ - How It Works
             </div>
           </div>
-
-          {/* Main content area */}
+          
           <div className="px-8 sm:px-12 md:px-16 lg:px-20 py-8 md:py-12 min-h-96 md:min-h-120 flex items-center justify-center bg-white">
             <div className="w-full max-w-4xl space-y-3 md:space-y-4">
               <AnimatePresence initial={false}>

@@ -55,7 +55,6 @@ export default function BuiltFor() {
           </div>
         </div>
 
-        {/* Built for Teachers */}
         <div className="space-y-10 lg:space-y-12">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black tracking-tight leading-tight text-left">
