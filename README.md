@@ -1,10 +1,88 @@
 # studyQ
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A modern educational platform landing page built with Next.js, featuring a comprehensive study solution for students and teachers.
 
-## Getting Started
+## 🚀 Features
 
-First, run the development server:
+- **Responsive Design**: Fully responsive landing page optimized for all devices
+- **Modern UI Components**: Built with React components and Tailwind CSS
+- **Interactive Elements**: Smooth animations powered by Framer Motion
+- **Educational Focus**: Dedicated sections for students and teachers
+- **Static Site Generation**: Optimized for performance and SEO
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16.1.2](https://nextjs.org) with App Router
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com)
+- **Animations**: [Framer Motion 12.26.2](https://framer.com/motion)
+- **Icons**: [Lucide React](https://lucide.dev)
+- **Deployment**: GitHub Pages with automated CI/CD
+
+## 📁 Project Structure
+
+```
+studyQ/
+├── .github/workflows/     # GitHub Actions deployment
+├── frontend/              # Main application
+│   ├── app/
+│   │   ├── components/    # React components
+│   │   ├── globals.css    # Global styles
+│   │   ├── layout.tsx     # Root layout
+│   │   └── page.tsx       # Home page
+│   ├── components/        # Shared components
+│   ├── constants/         # App constants
+│   ├── hooks/            # Custom React hooks
+│   └── public/           # Static assets
+└── README.md
+```
+
+## 🏗️ Page Components
+
+The landing page includes the following sections:
+- **TopNavigation**: Header with navigation menu
+- **Hero**: Main hero section with call-to-action
+- **WhyStudyQ**: Value proposition section
+- **Solution**: Problem-solution overview
+- **Features**: Key features showcase
+- **BuiltFor**: Target audience sections
+- **HowItWorks**: Process explanation
+- **Pricing**: Pricing plans
+- **Trust_Credible**: Social proof and testimonials
+- **CTA**: Call-to-action section
+- **Footer**: Site footer with links
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 20 or higher
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd studyQ
+```
+
+2. Navigate to the frontend directory:
+```bash
+cd frontend
+```
+
+3. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -12,43 +90,79 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a production build:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### GitHub Pages (Automated)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is configured for automatic deployment to GitHub Pages:
 
-## Deploy on GitHub Pages
-
-This project is configured for automatic deployment to GitHub Pages. To deploy:
-
-1. Push your code to the `main` branch of your GitHub repository
-2. Go to your repository Settings > Pages
+1. Push your code to the `main` branch
+2. Go to repository Settings > Pages
 3. Set Source to "GitHub Actions"
-4. The site will be automatically built and deployed on every push to main
+4. The site deploys automatically on every push to main
 
-The deployment workflow will:
-- Install dependencies
-- Build the static site
-- Deploy to GitHub Pages
+The deployment workflow:
+- Installs dependencies in the `frontend` directory
+- Builds the static site with `next build`
+- Deploys to GitHub Pages
+- Site available at: `https://<username>.github.io/<repository-name>`
 
-Your site will be available at: `https://<username>.github.io/<repository-name>`
+### Manual Deployment
 
-## Deploy on Vercel
+For other platforms, build the static site:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+cd frontend
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The static files will be generated in the `frontend/out` directory.
+
+### Vercel Deployment
+
+Deploy easily on [Vercel](https://vercel.com/new):
+
+1. Connect your GitHub repository
+2. Set the root directory to `frontend`
+3. Deploy with default settings
+
+## 🔧 Configuration
+
+- **Next.js Config**: `frontend/next.config.ts` - Configured for static export
+- **TypeScript**: `frontend/tsconfig.json`
+- **Tailwind CSS**: `frontend/postcss.config.mjs`
+- **ESLint**: `frontend/eslint.config.mjs`
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes in the `frontend` directory
+4. Test your changes locally
+5. Submit a pull request
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Framer Motion Documentation](https://framer.com/motion)
