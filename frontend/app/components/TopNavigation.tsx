@@ -29,7 +29,7 @@ export default function TopNavigation() {
           <img src="/android-chrome-192x192.png" alt="studyQ" className="w-12 h-12 sm:w-16 sm:h-16" />
         </Link>
 
-        {/* Desktop Navigation */}
+      
         <ul className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>
@@ -44,7 +44,7 @@ export default function TopNavigation() {
           ))}
         </ul>
 
-        {/* Desktop Auth Buttons */}
+       
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/login"
@@ -61,7 +61,7 @@ export default function TopNavigation() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+     
         <button
           className="md:hidden flex flex-col gap-1 p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -74,7 +74,7 @@ export default function TopNavigation() {
 
       </div>
 
-      {/* Mobile Menu */}
+    
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-4">
