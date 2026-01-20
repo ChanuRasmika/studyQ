@@ -46,7 +46,7 @@ export default function Solution() {
   ];
 
   return (
-    <section className="py-8 px-6 bg-gray-50">
+    <section id="about" className="py-8 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-black mb-4">

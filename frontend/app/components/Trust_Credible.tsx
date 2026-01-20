@@ -3,33 +3,28 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const STEPS = [
-  { type: 'heading', text: 'How studyQ Works?' },
-  { type: 'step', number: 1, text: 'Sign Up' },
-  { type: 'description', text: 'Create a free account in minutes.' },
-  { type: 'step', number: 2, text: 'Choose Your Subject & Mode' },
-  { type: 'description', text: 'Select study mode or exam mode.' },
-  { type: 'step', number: 3, text: 'Practice Questions' },
-  { type: 'description', text: 'Repeat, review, and improve with instant feedback.' },
-  { type: 'step', number: 4, text: 'Track Progress or Earn' },
-  { type: 'description', text: 'Students track performance. Teachers earn from content.' },
+  { type: 'heading', text: 'Why Trust studyQ?' },
+  { type: 'point', text: 'Designed for Sri Lankan students, with global scalalbility.' },
+  { type: 'point', text: 'Built with input from experienced educators.' },
+  { type: 'point', text: 'Focused on exam-oriented learning.' },
+  { type: 'point', text: 'Suitable for school, medical, and professional education.' },
 ] as const;
 
 type Step = (typeof STEPS)[number];
 
 const getDelayAfterLine = (step: Step): number => {
   if (step.type === 'heading') return 1800;
-  if (step.type === 'step') return 1400;
-  if (step.type === 'description') return 1000;
+  if (step.type === 'point') return 1400;
   return 1200;
 };
 
 const getTypingSpeed = (step: Step): number => {
   if (step.type === 'heading') return 80;
-  if (step.type === 'step') return 90;
+  if (step.type === 'point') return 90;
   return 65;
 };
 
-export default function HowItWorks() {
+export default function Trust_Credible() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedLines, setDisplayedLines] = useState<Step[]>([]);
   const [currentText, setCurrentText] = useState('');
@@ -79,17 +74,15 @@ export default function HowItWorks() {
     switch (step.type) {
       case 'heading':
         return 'text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight text-center';
-      case 'step':
-        return 'text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-4 mt-8';
-      case 'description':
-        return 'text-lg sm:text-xl text-gray-700 leading-relaxed pl-10 sm:pl-12 max-w-3xl';
+      case 'point':
+        return 'text-lg sm:text-xl text-gray-900 flex items-center gap-4 mt-8';
       default:
         return '';
     }
   };
 
   return (
-    <section id="how-it-works" className="py-8 md:py-12 bg-linear-to-b">
+    <section className="py-8 md:py-12 bg-linear-to-b">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">    
         <div className="rounded-2xl overflow-hidden border border-gray-200/70 bg-white shadow-xl shadow-gray-300/30">
           <div className="h-10 sm:h-11 bg-linear-to-b from-gray-100 to-gray-200 flex items-center px-4 gap-3">
@@ -114,9 +107,9 @@ export default function HowItWorks() {
                     transition={{ duration: 0.4 }}
                     className={getLineClass(step)}
                   >
-                    {step.type === 'step' && (
-                      <span className="text-3xl sm:text-4xl font-black text-gray-900 min-w-6 sm:min-w-8">
-                        {step.number}
+                    {step.type === 'point' && (
+                      <span className="text-3xl sm:text-4xl text-gray-900 min-w-6 sm:min-w-8">
+                        •
                       </span>
                     )}
                     <span>{step.text}</span>
@@ -125,9 +118,9 @@ export default function HowItWorks() {
 
                 {isTyping && (
                   <div className={getLineClass(currentStep)}>
-                    {currentStep.type === 'step' && (
-                      <span className="text-3xl sm:text-4xl font-black text-gray-900 min-w-6 sm:min-w-8">
-                        {currentStep.number}
+                    {currentStep.type === 'point' && (
+                      <span className="text-3xl sm:text-4xl text-gray-900 min-w-6 sm:min-w-8">
+                        •
                       </span>
                     )}
                     <span>

@@ -4,10 +4,18 @@ import Link from 'next/link';
 
 const NAV_ITEMS = [
   { label: 'About', href: '#about' },
-  { label: 'Features', href: '#feature' },
-  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Features', href: '#features' },
+  { label: 'How studyQ Works', href: '#how-it-works' },
   { label: 'Pricing', href: '#pricing' },
 ];
+
+const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  e.preventDefault();
+  const element = document.querySelector(href);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 export default function TopNavigation() {
   
@@ -22,12 +30,13 @@ export default function TopNavigation() {
         <ul className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>
-              <Link
+              <a
                 href={item.href}
-                className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+                onClick={(e) => handleSmoothScroll(e, item.href)}
+                className="text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer"
               >
                 {item.label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
