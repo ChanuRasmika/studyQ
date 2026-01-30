@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
+import { getAssetPath } from '@/lib/basePath';
 
 const NAV_ITEMS = [
   { label: 'About', href: '#about' },
@@ -26,7 +28,13 @@ export default function TopNavigation() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
 
         <Link href="/" className="flex items-center gap-2">
-          <img src="/android-chrome-192x192.png" alt="studyQ" className="w-12 h-12 sm:w-16 sm:h-16" />
+          <Image 
+            src={getAssetPath('/android-chrome-192x192.png')} 
+            alt="studyQ" 
+            width={192}
+            height={192}
+            className="w-12 h-12 sm:w-16 sm:h-16" 
+          />
         </Link>
 
       

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/basePath';
 
 export default function Hero() {
   return (
@@ -8,7 +9,7 @@ export default function Hero() {
         <div>
           <div className="mb-0">
             <Image 
-              src="/hero-image.png" 
+              src={getAssetPath('/hero-image.png')} 
               alt="Modern student using digital tools for exam preparation" 
               width={800}
               height={600}

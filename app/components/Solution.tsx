@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { getAssetPath } from '@/lib/basePath';
 
 export default function Solution() {
   const [displayText, setDisplayText] = useState('');
@@ -26,22 +27,22 @@ export default function Solution() {
     {
       title: "Practice Questions Multiple Times",
       description: "Reinforce your learning by practicing questions repeatedly",
-      icon: "/Solution/rotate.png"
+      icon: getAssetPath("/Solution/rotate.png")
     },
     {
       title: "Study Mode and Exam Mode",
       description: "Switch between relaxed study sessions and timed exam practice",
-      icon: "/Solution/exam.png"
+      icon: getAssetPath("/Solution/exam.png")
     },
     {
       title: "Instant Answers and Explanations",
       description: "Get immediate feedback with detailed explanations",
-      icon: "/Solution/light-bulb.png"
+      icon: getAssetPath("/Solution/light-bulb.png")
     },
     {
       title: "Study from Any Device, Anytime",
       description: "Learn without relying on physical books - access anywhere",
-      icon: "/Solution/app.png"
+      icon: getAssetPath("/Solution/app.png")
     }
   ];
 

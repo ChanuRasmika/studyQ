@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/basePath';
 
 export default function BuiltFor() {
   return (
@@ -43,7 +44,7 @@ export default function BuiltFor() {
                   </ul>
                 </div>
                 <div className="relative">
-                  <Image src="/builtforStudent.jpg" alt="Built for Students" width={400} height={240} className="h-60 w-full object-cover rounded-xl" />
+                  <Image src={getAssetPath("/builtforStudent.jpg")} alt="Built for Students" width={400} height={240} className="h-60 w-full object-cover rounded-xl" />
                   <div className="absolute bottom-4 right-4">
                     <p className="text-lg md:text-xl font-bold italic text-white bg-black bg-opacity-50 px-3 py-1 rounded">
                       Study smarter, not longer.
@@ -94,7 +95,7 @@ export default function BuiltFor() {
                 </ul>
               </div>
               <div>
-                <Image src="/builtforTeachers.jpg" alt="Built for Teachers" width={400} height={240} className="h-60 w-full object-cover rounded-xl" />
+                <Image src={getAssetPath("/builtforTeachers.jpg")} alt="Built for Teachers" width={400} height={240} className="h-60 w-full object-cover rounded-xl" />
               </div>
             </div>
           </div>

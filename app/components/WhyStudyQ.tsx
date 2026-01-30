@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/basePath';
 
 export default function WhyStudyQSection() {
   return (
@@ -58,7 +59,7 @@ export default function WhyStudyQSection() {
           <div className="lg:col-span-7">
             <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-200 h-full min-h-120 lg:min-h-155">
               <Image
-                src="/whyImage.jpg"
+                src={getAssetPath("/whyImage.jpg")}
                 alt="studyQ helping students and teachers"
                 fill
                 className="object-cover"

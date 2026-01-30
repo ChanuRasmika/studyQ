@@ -1,30 +1,31 @@
 'use client';
 
 import Image from "next/image";
+import { getAssetPath } from '@/lib/basePath';
 
 const features = [
   {
-    icon: "/Features/open-book.png",
+    icon: getAssetPath("/Features/open-book.png"),
     title: "Digital Question Practice",
     description: "No physical books. All questions available digitally and always updated.",
   },
   {
-    icon: "/Features/time-tracking.png",
+    icon: getAssetPath("/Features/time-tracking.png"),
     title: "Study Mode & Exam Mode",
     description: "Learn step-by-step or test yourself under real exam conditions.",
   },
   {
-    icon: "/Features/lightning.png",
+    icon: getAssetPath("/Features/lightning.png"),
     title: "Instant Answers & Explanations",
     description: "Understand mistakes immediately and improve faster.",
   },
   {
-    icon: "/Features/analysis.png",
+    icon: getAssetPath("/Features/analysis.png"),
     title: "Performance Analytics",
     description: "Track strengths, weaknesses, and progress clearly.",
   },
   {
-    icon: "/Features/teacher.png",
+    icon: getAssetPath("/Features/teacher.png"),
     title: "Teacher Contributions",
     description: "Teachers create questions and earn while reaching more students.",
   },

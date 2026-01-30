@@ -19,6 +19,48 @@ A modern educational platform landing page built with Next.js, featuring a compr
 - **Icons**: [Lucide React](https://lucide.dev)
 - **Deployment**: GitHub Pages with automated CI/CD
 
+## ⚙️ Environment Configuration
+
+This project uses environment-aware base paths for seamless deployment across different platforms.
+
+### Local Development
+
+The `.env.local` file is already configured for local development:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=
+```
+
+Just run:
+```bash
+npm run dev
+```
+
+### GitHub Pages Deployment
+
+The environment variable is configured in `.github/workflows/nextjs.yml`:
+
+```yaml
+- name: Build with Next.js
+  env:
+    NEXT_PUBLIC_BASE_PATH: /studyQ
+  run: npm run build
+```
+
+**To deploy to a different repository**, update the workflow file:
+1. Open `.github/workflows/nextjs.yml`
+2. Change `/studyQ` to `/your-repo-name`
+3. Commit and push
+
+### Other Deployment Platforms
+
+**Vercel / Netlify / Other:**
+1. Add environment variable in your platform's dashboard
+2. Key: `NEXT_PUBLIC_BASE_PATH`
+3. Value: Leave empty for root domain or `/subdirectory` for subpath
+
+**Note:** Never commit `.env` files to Git. They're already in `.gitignore`.
+
 ## 📁 Project Structure
 
 ```
