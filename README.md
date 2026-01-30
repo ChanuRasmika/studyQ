@@ -66,16 +66,13 @@ The environment variable is configured in `.github/workflows/nextjs.yml`:
 ```
 studyQ/
 ├── .github/workflows/     # GitHub Actions deployment
-├── frontend/              # Main application
-│   ├── app/
-│   │   ├── components/    # React components
-│   │   ├── globals.css    # Global styles
-│   │   ├── layout.tsx     # Root layout
-│   │   └── page.tsx       # Home page
-│   ├── components/        # Shared components
-│   ├── constants/         # App constants
-│   ├── hooks/            # Custom React hooks
-│   └── public/           # Static assets
+├── app/
+│   ├── components/        # React components
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── lib/                   # Utility functions
+├── public/                # Static assets
 └── README.md
 ```
 
@@ -108,12 +105,7 @@ git clone <repository-url>
 cd studyQ
 ```
 
-2. Navigate to the frontend directory:
-```bash
-cd frontend
-```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 # or
@@ -160,7 +152,7 @@ This project is configured for automatic deployment to GitHub Pages:
 4. The site deploys automatically on every push to main
 
 The deployment workflow:
-- Installs dependencies in the `frontend` directory
+- Installs dependencies
 - Builds the static site with `next build`
 - Deploys to GitHub Pages
 - Site available at: `https://<username>.github.io/<repository-name>`
@@ -170,26 +162,47 @@ The deployment workflow:
 For other platforms, build the static site:
 
 ```bash
-cd frontend
 npm run build
 ```
 
-The static files will be generated in the `frontend/out` directory.
+The static files will be generated in the `out` directory.
 
 ### Vercel Deployment
 
 Deploy easily on [Vercel](https://vercel.com/new):
 
 1. Connect your GitHub repository
-2. Set the root directory to `frontend`
-3. Deploy with default settings
+2. Deploy with default settings (Vercel auto-detects Next.js)
+3. Add `NEXT_PUBLIC_BASE_PATH` environment variable if needed (leave empty for root domain)
 
 ## 🔧 Configuration
 
-- **Next.js Config**: `frontend/next.config.ts` - Configured for static export
-- **TypeScript**: `frontend/tsconfig.json`
-- **Tailwind CSS**: `frontend/postcss.config.mjs`
-- **ESLint**: `frontend/eslint.config.mjs`
+- **Next.js Config**: `next.config.ts` - Configured for static export with environment-aware base paths
+- **TypeScript**: `tsconfig.json`
+- **Tailwind CSS**: `postcss.config.mjs`
+- **ESLint**: `eslint.config.mjs`
+- **Environment Variables**: `.env.local` (development), `.env.production.example` (production template)
+
+### How the Base Path System Works
+
+This project uses a smart environment-based asset path system:
+
+1. **Environment Variable**: `NEXT_PUBLIC_BASE_PATH` controls the base path for all assets
+2. **Helper Function**: `getAssetPath()` in `lib/basePath.ts` automatically prefixes asset paths
+3. **Next.js Config**: Reads the environment variable and applies it to routing and static assets
+
+**Benefits:**
+- ✅ No code changes needed when switching between environments
+- ✅ Works seamlessly on GitHub Pages, Vercel, Netlify, or custom domains
+- ✅ All images and assets automatically use the correct path
+- ✅ Single codebase for local development and production
+
+**Usage in components:**
+```tsx
+import { getAssetPath } from '@/lib/basePath';
+
+<Image src={getAssetPath('/hero-image.png')} alt="Hero" />
+```
 
 ## 📝 License
 
@@ -198,10 +211,12 @@ This project is private and proprietary.
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes in the `frontend` directory
-4. Test your changes locally
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Test your changes locally with `npm run dev`
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
 
 ## 📚 Learn More
 

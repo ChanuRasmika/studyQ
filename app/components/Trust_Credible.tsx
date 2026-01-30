@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const STEPS = [
   { type: 'heading', text: 'Why Trust studyQ?' },
-  { type: 'point', text: 'Designed for Sri Lankan students, with global scalalbility.' },
+  { type: 'point', text: 'Designed for Sri Lankan students, with global scalability.' },
   { type: 'point', text: 'Built with input from experienced educators.' },
   { type: 'point', text: 'Focused on exam-oriented learning.' },
   { type: 'point', text: 'Suitable for school, medical, and professional education.' },
